@@ -7,3 +7,6 @@ function Book() {
 function addBookToLibrary() {
     // do stuff here
 }
+
+
+// idea: ligt and dark mode
