@@ -1,1 +1,10 @@
+/* Following gets rid of default styling        https://developer.mozilla.org/en-US/docs/Learn/Forms/Advanced_form_styling
+button, input, select {
+    font-family: inherit;
+    font-size: 100%;
+}
+input {
+    appearance: none;
+} */
+
 /* idea: use position syicky on header */

@@ -18,7 +18,22 @@
         <h3>This is a project for <a href="https://www.theodinproject.com/lessons/node-path-javascript-library"> Odin
                 Project</a> in which the aim is to make a library using Object Constructors and LocalStorage.</h3>
     </header>
-    <div class="addBook"></div>
+
+    <form action="example.com/path" method="post">
+        <label for="bookTitle">Book title</label>
+        <input type="text" id="bookTitle" placeholder="The Lord of the Rings" name="title" required>
+
+        <label for="author">Author</label>
+        <input type="text" id="author" placeholder="Tolkien John Ronald Reuel" name="author" required>
+
+        <select name="status" required>
+            <option value="read" selected>Read</option>
+            <option value="notRead">Not read</option>
+        </select>
+        <button type="submit">SUBMIT</button>
+        <button type="reset">RESET</button>
+    </form>
+
 
 </body>
 
