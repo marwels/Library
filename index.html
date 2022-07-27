@@ -20,13 +20,15 @@
     </header>
 
     <form action="example.com/path" method="post">
-        <label for="bookTitle">Book title</label>
-        <input type="text" id="bookTitle" placeholder="The Lord of the Rings" name="title" required>
+        <label for="bookTitle">Book title*</label>
+        <input type="text" id="bookTitle" placeholder="The Lord of the Rings" name="title" minlength="1"
+            maxlength="2000" required>
 
-        <label for="author">Author</label>
-        <input type="text" id="author" placeholder="Tolkien John Ronald Reuel" name="author" required>
+        <label for="author">Author*</label>
+        <input type="text" id="author" placeholder="Tolkien John Ronald Reuel" name="author" minlength="1"
+            maxlength="2000" required>
 
-        <select name="status" required>
+        <select name="status">
             <option value="read" selected>Read</option>
             <option value="notRead">Not read</option>
         </select>
