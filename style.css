@@ -7,4 +7,11 @@ input {
     appearance: none;
 } */
 
+/* You can style an input’s placeholder text with the ::placeholder pseudo-element:
+/* blue placeholder on email fields */
+input[type="email"]::placeholder {
+  color: blue;
+} */
+
+
 /* idea: use position syicky on header */
