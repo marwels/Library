@@ -24,20 +24,23 @@
         </header>
 
         <form action="example.com/path" method="post">
-            <label for="bookTitle">Book title*</label>
+            <label for="bookTitle">Book title <span>*</span></label>
             <input type="text" id="bookTitle" placeholder="The Lord of the Rings" name="title" minlength="1"
                 maxlength="2000" required>
 
-            <label for="author">Author*</label>
+            <label for="author">Author <span>*</span></label>
             <input type="text" id="author" placeholder="Tolkien John Ronald Reuel" name="author" minlength="1"
                 maxlength="2000" required>
-
-            <select name="status">
-                <option value="read" selected>Read</option>
-                <option value="notRead">Not read</option>
-            </select>
-            <button type="submit">SUBMIT</button>
-            <button type="reset">RESET</button>
+            <div class="select">
+                <select name="status">
+                    <option value="read" selected>Read</option>
+                    <option value="notRead">Not read</option>
+                </select>
+            </div>
+            <div class="buttons">
+                <button type="submit">SUBMIT</button>
+                <button type="reset">RESET</button>
+            </div>
         </form>
 
     </div>
