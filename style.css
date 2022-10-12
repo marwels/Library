@@ -3,6 +3,10 @@
   --select-border: #f66e23;
   --select-focus: #f66d2350;
   --select-arrow: var(--select-border);
+--font-size-title: 2em;
+--font-size-labels: 1em;
+--font-size-text: 1em;
+
 }
 * {
   background-color: #fefefe;
@@ -17,22 +21,25 @@
 
 #form_container {
   border: 3px solid #f66e23;
-  padding: 30px;
+  padding: 2.5em;
+  width:40vw;
+    height:40vw;
+
 }
 
 #library_title {
   color:#f66e23;
-  font-size: 2.5em;
+  font-size: var(--font-size-title);
 }
 
 form {
   display: flex;
   flex-direction: column;
-  row-gap: 15px;
+  row-gap: 1em;
 }
 
-label, select {
-  font-size: 1.5em;
+label, select, .read {
+  font-size: var(--font-size-labels);
 }
 
 label>span {
@@ -68,7 +75,7 @@ select {
   border: 1px solid var(--select-border);
   border-radius: 0.25em;
   padding: 0.25em 0.5em;
-  font-size: 1.25rem;
+  font-size: var(--font-size-text);
   cursor: pointer;
   line-height: 1.1;
   background-color: #fefefe;
@@ -110,8 +117,8 @@ select:focus + .focus {
 button {
   border: 1px solid #f66e23;
   background-color: #e0e3e2;
-  border-radius: 20px;
-  padding: 8px 20px;
+  border-radius: 1em;
+  padding: 0.5em 1.5em;
   width: fit-content;
 }
 
@@ -122,12 +129,17 @@ input {
   border: 1px solid var(--select-border);
   border-radius: 0.25em;
   padding: 0.25em 0.5em;
-  font-size: 1.25rem;
+  font-size: var(--font-size-text);
   cursor: pointer;
   line-height: 1.1;
   background-color: #fefefe;
   background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
 
+}
+
+p.read {
+  margin-block-start: 0;
+  margin-block-end: 0.25em;
 }
 
 

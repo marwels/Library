@@ -31,12 +31,15 @@
             <label for="author">Author <span>*</span></label>
             <input type="text" id="author" placeholder="Tolkien John Ronald Reuel" name="author" minlength="1"
                 maxlength="2000" required>
-            <div class="select">
-                <select name="status">
-                    <option value="read" selected>Read</option>
-                    <option value="notRead">Not read</option>
-                </select>
-                <span class="focus"></span>
+            <div class="select_and_q">
+                <p class="read">Have you read it?</p>
+                <div class="select">
+                    <select name="status">
+                        <option value="read" selected>Read</option>
+                        <option value="notRead">Not read</option>
+                    </select>
+                    <span class="focus"></span>
+                </div>
             </div>
             <div class="buttons">
                 <button type="submit">SUBMIT</button>
