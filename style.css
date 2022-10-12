@@ -53,7 +53,12 @@ select {
   font-size: inherit;
   cursor: inherit;
   line-height: inherit;
+
+  /* Remove focus outline, will add on alternate element */
   outline: none;
+
+  /* Stack above custom arrow */
+  z-index: 1;
 }
 
 .select {
@@ -74,6 +79,8 @@ select {
   grid-template-areas: "select";
   /* to allign arrow */
    align-items: center;
+
+   position: relative;
 }
 
 .select::after {
@@ -88,6 +95,16 @@ select,
 .select:after {
   grid-area: select;
   justify-self: end;
+}
+
+select:focus + .focus {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border: 2px solid var(--select-focus);
+  border-radius: inherit;
 }
 
 button {
