@@ -23,7 +23,8 @@
             <h1 id="library_title">My Library</h1>
         </header>
 
-        <form action="example.com/path" method="post">
+        <form id="form" onsubmit="createBookEntry()">
+            <!-- action="example.com/path" method="post" -->
             <label for="bookTitle">Book title <span>*</span></label>
             <input type="text" id="bookTitle" placeholder="The Lord of the Rings" name="title" minlength="1"
                 maxlength="2000" required>
@@ -34,7 +35,7 @@
             <div class="select_and_q">
                 <p class="read">Have you read it?</p>
                 <div class="select">
-                    <select name="status">
+                    <select id="status" name="status">
                         <option value="read" selected>Read</option>
                         <option value="notRead">Not read</option>
                     </select>
@@ -42,7 +43,7 @@
                 </div>
             </div>
             <div class="buttons">
-                <button type="submit">SUBMIT</button>
+                <button type="submit" form="form" value="submit">SUBMIT</button>
                 <button type="reset">RESET</button>
             </div>
         </form>

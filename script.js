@@ -1,10 +1,26 @@
 let myLibrary = [];
+let bookCount = 0;
 
-function Book(author, title, pages, read) {
-    this.author = author;
-    this.title = title;
-    this.pages = pages;
-    this.read = read;
+const Book = {
+    author: "A. A. Mielne",
+    title: "Winnie the Pooh",
+    status: "read"
+};
+
+let form = document.getElementById("form");
+form.onsubmit = createBookEntry();
+
+
+function createBookEntry() {
+
+    const book1 = Object.create(Book);
+    book1.author = document.getElementById("author").value;
+    book1.title = document.getElementById("bookTitle").value;
+    book1.status = document.getElementById("status").value;
+
+    addBookToLibrary(book1);
+    console.log(book1);
+
 }
 
 function addBookToLibrary(book) {
