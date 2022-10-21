@@ -17,37 +17,43 @@
 </head>
 
 <body>
+    <div class="grid_container_bkg">
 
-    <div id="form_container">
-        <header>
-            <h1 id="library_title">My Library</h1>
-        </header>
+        <div class="small_circle"></div>
+        <div class="big_circle"></div>
 
-        <form id="form" onsubmit="createBookEntry()">
-            <!-- action="example.com/path" method="post" -->
-            <label for="bookTitle">Book title <span>*</span></label>
-            <input type="text" id="bookTitle" placeholder="The Lord of the Rings" name="title" minlength="1"
-                maxlength="2000" required>
+        <div id="form_container">
+            <header>
+                <h1 id="library_title">My Library</h1>
+            </header>
 
-            <label for="author">Author <span>*</span></label>
-            <input type="text" id="author" placeholder="Tolkien John Ronald Reuel" name="author" minlength="1"
-                maxlength="2000" required>
-            <div class="select_and_q">
-                <p class="read">Have you read it?</p>
-                <div class="select">
-                    <select id="status" name="status">
-                        <option value="read" selected>Read</option>
-                        <option value="notRead">Not read</option>
-                    </select>
-                    <span class="focus"></span>
+
+            <form id="form" onsubmit="createBookEntry()">
+                <!-- action="example.com/path" method="post" -->
+                <label for="bookTitle">Book title <span>*</span></label>
+                <input type="text" id="bookTitle" placeholder="The Lord of the Rings" name="title" minlength="1"
+                    maxlength="2000" required>
+
+                <label for="author">Author <span>*</span></label>
+                <input type="text" id="author" placeholder="Tolkien John Ronald Reuel" name="author" minlength="1"
+                    maxlength="2000" required>
+                <div class="select_and_q">
+                    <p class="read">Have you read it?</p>
+                    <div class="select">
+                        <select id="status" name="status">
+                            <option value="read" selected>Read</option>
+                            <option value="notRead">Not read</option>
+                        </select>
+                        <span class="focus"></span>
+                    </div>
                 </div>
-            </div>
-            <div class="buttons">
-                <button type="submit" form="form" value="submit">SUBMIT</button>
-                <button type="reset">RESET</button>
-            </div>
-        </form>
+                <div class="buttons">
+                    <button type="submit" form="form" value="submit">SUBMIT</button>
+                    <button type="reset">RESET</button>
+                </div>
+            </form>
 
+        </div>
     </div>
 </body>
 
