@@ -8,10 +8,11 @@ const Book = {
 };
 
 let form = document.getElementById("form");
-form.onsubmit = createBookEntry();
+form.addEventListener("submit", createBookEntry);
 
 
-function createBookEntry() {
+function createBookEntry(e) {
+    e.preventDefault();
 
     const book1 = Object.create(Book);
     book1.author = document.getElementById("author").value;

@@ -3,9 +3,9 @@
   --select-border: #f66e23;
   --select-focus: #f66d2350;
   --select-arrow: var(--select-border);
---font-size-title: 3em;
---font-size-labels: 1.3em;
---font-size-text: 1.3em;
+--font-size-title: 5.9vh;
+--font-size-labels: 3vh;
+--font-size-text: 2vh;
 
 }
 * {
@@ -53,7 +53,7 @@ grid-template-rows: repeat(5, 1fr);
 grid-area: 2/2/4/4;
   border: 5px solid #f66e23;
   padding: 2.5em 5em;
-  height: 70%;
+  max-height: 80%;
   aspect-ratio: 1/1;
 }
 
@@ -65,7 +65,7 @@ grid-area: 2/2/4/4;
 form {
   display: flex;
   flex-direction: column;
-  row-gap: 1em;
+  row-gap: 2vh;
 }
 
 label, select, .read {
@@ -144,6 +144,11 @@ select:focus + .focus {
   border-radius: inherit;
 }
 
+.buttons {
+  display: flex;
+  column-gap: 2vw;
+}
+
 button {
   border: 1px solid #f66e23;
   background-color: #e0e3e2;
@@ -151,6 +156,7 @@ button {
   border-radius: 1em;
   padding: 0.5em 1.5em;
   width: fit-content;
+  margin-bottom: 2vh;
 }
 
 input {

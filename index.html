@@ -28,7 +28,7 @@
             </header>
 
 
-            <form id="form" onsubmit="createBookEntry()">
+            <form id="form">
                 <!-- action="example.com/path" method="post" -->
                 <label for="bookTitle">Book title <span>*</span></label>
                 <input type="text" id="bookTitle" placeholder="The Lord of the Rings" name="title" minlength="1"
@@ -48,8 +48,8 @@
                     </div>
                 </div>
                 <div class="buttons">
-                    <button type="submit" form="form" value="submit">SUBMIT</button>
                     <button type="reset">RESET</button>
+                    <button type="submit" form="form" value="submit">SUBMIT</button>
                 </div>
             </form>
 
