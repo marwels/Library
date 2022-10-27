@@ -30,6 +30,16 @@ function addBookToLibrary(book) {
     displayLibrary(myLibrary);
 }
 
+function onDeleteBook(event) {
+    const i = Number(event.target.dataset["index"]);
+    if (!Number.isFinite(i)) throw new Error(`Malformed index: ${event.target.dataset["index"]}`);
+    console.log(i);
+    myLibrary.splice(i, 1);
+    console.log(myLibrary);
+
+    displayLibrary(myLibrary);
+}
+
 function displayLibrary(myLibrary) {
 
     const books_display = document.getElementById("books_display");
@@ -87,8 +97,9 @@ function displayLibrary(myLibrary) {
         const deleteButton = document.createElement("button");
         deleteButton.textContent = "DELETE";
         deleteButton.classList.add("deleteButton");
-        deleteButton.setAttribute("id", `button${i}`);
+        deleteButton.dataset['index'] = i;
 
+        deleteButton.addEventListener("click", onDeleteBook);
 
         bookContainer.appendChild(author);
         bookContainer.appendChild(title);
