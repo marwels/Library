@@ -44,15 +44,34 @@ function displayLibrary(myLibrary) {
 
         const author = document.createElement("div");
         author.classList.add("author");
-        author.innerText = "Author: " + thisBook.author;
+        const authorSpan = document.createElement("span");
+        authorSpan.classList.add("bold");
+        authorSpan.innerText = "Author: ";
+        author.appendChild(authorSpan);
+        const authorSpan2 = document.createElement("span");
+        authorSpan2.innerText = thisBook.author;
+        author.appendChild(authorSpan2);
+
 
         const title = document.createElement("div");
         title.classList.add("title");
-        title.innerText = "Title: " + thisBook.title;
+        const titleSpan = document.createElement("span");
+        titleSpan.classList.add("bold");
+        titleSpan.innerText = "Title: ";
+        title.appendChild(titleSpan);
+        const titleSpan2 = document.createElement("span");
+        titleSpan2.innerText = thisBook.title;
+        title.appendChild(titleSpan2);
 
         const read = document.createElement("div");
         read.classList.add("readYN");
-        read.innerText = "Status: " + thisBook.status;
+        const readSpan = document.createElement("span");
+        readSpan.classList.add("bold");
+        readSpan.innerText = "Status: ";
+        read.appendChild(readSpan);
+        const readSpan2 = document.createElement("span");
+        readSpan2.innerText = thisBook.status;
+        read.appendChild(readSpan2);
 
         bookContainer.appendChild(author);
         bookContainer.appendChild(title);
