@@ -57,7 +57,7 @@ grid-area: 2/2/4/4;
   aspect-ratio: 1/1;
 }
 
-#library_title {
+#library_title, .libraryTitle {
   color:#f66e23;
   font-size: var(--font-size-title);
 }
@@ -180,13 +180,39 @@ p.read {
 }
 
 #books_display {
-grid-area: 5/1/5/5;
-  display: flex;
+grid-area: 4/1/4/5;
+  
+}
+
+.libraryTitle {
+  color: #f66e23;
+  font-size: var(--font-size-title);
+  text-align: center;
+}
+
+.books {
+display: flex;
   flex-wrap: wrap;
+  gap: var(--font-size-labels) var(--font-size-labels);
+  font-size: var(--font-size-labels);
+  margin: 0 5vw;
 }
 
 .bold {
+  color: #f66e23;
   font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.title, .author, .readYN {
+  margin: 2vw 5vw;
+}
+
+.deleteButton {
+  margin: 0vw 5vw;
 }
 
 

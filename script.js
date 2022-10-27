@@ -35,6 +35,16 @@ function displayLibrary(myLibrary) {
     const books_display = document.getElementById("books_display");
     books_display.replaceChildren();
 
+    const libraryTitle = document.createElement("h1");
+    libraryTitle.innerText = "Your Library";
+    libraryTitle.classList.add("libraryTitle");
+    books_display.appendChild(libraryTitle);
+
+
+    const books = document.createElement("div");
+    books.classList.add("books");
+    books_display.appendChild(books);
+
     for (let i = 0; i < myLibrary.length; i++) {
         const thisBook = myLibrary[i];
         console.log(thisBook)
@@ -60,7 +70,8 @@ function displayLibrary(myLibrary) {
         titleSpan.innerText = "Title: ";
         title.appendChild(titleSpan);
         const titleSpan2 = document.createElement("span");
-        titleSpan2.innerText = thisBook.title;
+        titleSpan2.classList.add("italic");
+        titleSpan2.innerText = `"${thisBook.title}"`;
         title.appendChild(titleSpan2);
 
         const read = document.createElement("div");
@@ -73,14 +84,21 @@ function displayLibrary(myLibrary) {
         readSpan2.innerText = thisBook.status;
         read.appendChild(readSpan2);
 
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "DELETE";
+        deleteButton.classList.add("deleteButton");
+
+
         bookContainer.appendChild(author);
         bookContainer.appendChild(title);
         bookContainer.appendChild(read);
+        bookContainer.appendChild(deleteButton);
 
 
-        books_display.appendChild(bookContainer);
+        books.appendChild(bookContainer);
     }
 }
+
 
 //https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation
 // idea: ligt and dark mode
