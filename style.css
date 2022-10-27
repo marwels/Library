@@ -179,6 +179,13 @@ p.read {
   margin-block-end: 0.25em;
 }
 
+#books_display {
+grid-area: 5/1/5/5;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
 
 /* Following gets rid of default styling        https://developer.mozilla.org/en-US/docs/Learn/Forms/Advanced_form_styling
 button, input, select {

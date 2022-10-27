@@ -1,7 +1,7 @@
 let myLibrary = [];
 let bookCount = 0;
 
-const Book = {
+const book = {
     author: "A. A. Mielne",
     title: "Winnie the Pooh",
     status: "read"
@@ -14,47 +14,52 @@ form.addEventListener("submit", createBookEntry);
 function createBookEntry(e) {
     e.preventDefault();
 
-    const book1 = Object.create(Book);
-    book1.author = document.getElementById("author").value;
-    book1.title = document.getElementById("bookTitle").value;
-    book1.status = document.getElementById("status").value;
+    const newBook = Object.create(book);
+    newBook.author = document.getElementById("author").value;
+    newBook.title = document.getElementById("bookTitle").value;
+    newBook.status = document.getElementById("status").value;
 
-    addBookToLibrary(book1);
-    console.log(book1);
+    addBookToLibrary(newBook);
+    console.log(newBook);
 
 }
 
 function addBookToLibrary(book) {
-    myLibrary += book;
+    myLibrary.push(book);
+    console.log(myLibrary);
+    displayLibrary(myLibrary);
 }
 
 function displayLibrary(myLibrary) {
 
+    const books_display = document.getElementById("books_display");
+    books_display.replaceChildren();
+
     for (let i = 0; i < myLibrary.length; i++) {
+        const thisBook = myLibrary[i];
+        console.log(thisBook)
 
         const bookContainer = document.createElement("div");
         bookContainer.classList.add("bookContainer");
 
         const author = document.createElement("div");
         author.classList.add("author");
-        author.innerText = myLibrary[i].author;
+        author.innerText = "Author: " + thisBook.author;
 
         const title = document.createElement("div");
         title.classList.add("title");
-        author.innerText = myLibrary[i].title;
-
-        const pages = document.createElement("div");
-        pages.classList.add("pages");
-        author.innerText = myLibrary[i].pages;
+        title.innerText = "Title: " + thisBook.title;
 
         const read = document.createElement("div");
-        read.classList.add("read");
-        author.innerText = myLibrary[i].read;
+        read.classList.add("readYN");
+        read.innerText = "Status: " + thisBook.status;
 
         bookContainer.appendChild(author);
         bookContainer.appendChild(title);
-        bookContainer.appendChild(pages);
         bookContainer.appendChild(read);
+
+
+        books_display.appendChild(bookContainer);
     }
 }
 
