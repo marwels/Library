@@ -47,7 +47,7 @@ function displayLibrary(myLibrary) {
 
     for (let i = 0; i < myLibrary.length; i++) {
         const thisBook = myLibrary[i];
-        console.log(thisBook)
+        console.log(thisBook);
 
         const bookContainer = document.createElement("div");
         bookContainer.classList.add("bookContainer");
@@ -87,6 +87,7 @@ function displayLibrary(myLibrary) {
         const deleteButton = document.createElement("button");
         deleteButton.textContent = "DELETE";
         deleteButton.classList.add("deleteButton");
+        deleteButton.setAttribute("id", `button${i}`);
 
 
         bookContainer.appendChild(author);

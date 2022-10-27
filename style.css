@@ -180,14 +180,16 @@ p.read {
 }
 
 #books_display {
-grid-area: 4/1/4/5;
+grid-area: 4/1/4/6;
   
 }
 
 .libraryTitle {
   color: #f66e23;
   font-size: var(--font-size-title);
-  text-align: center;
+  width: fit-content;
+  margin: 4vh auto;
+  /* text-align: center; */
 }
 
 .books {
